@@ -1,0 +1,16 @@
+* {
+  --color-bright: #FFFFFF;
+  --color-chant-bg: #772CE8;
+  --color-dark: #1E1E22;
+  --animation-length: 800ms;
+}
+
+body {
+  background-color: var(--color-dark);
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-bright);
+}
+
+a {
+  color: var(--color-chant-bg);
+}
