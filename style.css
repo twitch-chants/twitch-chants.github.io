@@ -1,0 +1,272 @@
+* {
+  --color-bright: #FFFFFF;
+  --color-chant-bg: #772CE8;
+  --color-dark: #1E1E22;
+  --animation-length: 800ms;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark); /* #39393E */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  height: 215px;
+  text-align: center;
+}
+
+header svg {
+  width: 300px;
+  transform: rotate(-12deg) translate(-9px, 50px);
+  animation: slideDown var(--animation-length) ease-out;
+}
+
+.texts {
+  color: var(--color-bright);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+h1 {
+  width: 500px;
+  font-size: 36px;
+  animation: slideRight var(--animation-length) ease-out 200ms forwards;
+  opacity: 0;
+}
+
+p {
+  width: 310px;
+  margin: 0 0 10px;
+  text-align: right;
+  animation: slideLeft var(--animation-length) ease-out 300ms forwards;
+  opacity: 0;
+}
+
+.download-top {
+  padding: 10px 300px 0;
+  background-color: var(--color-dark);
+  position: sticky;
+  bottom: 110px;
+  color: var(--color-bright);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn var(--animation-length) ease-out 1000ms forwards;
+  opacity: 0;
+}
+
+.download-top svg {
+  height: 20px;
+}
+
+.download-top h2 {
+  margin: 0 0 0 10px;
+}
+
+.download-section {
+  width: 250px;
+  height: 60px;
+  padding: 15px 300px 42px;
+  background-color: var(--color-dark);
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.download-section a {
+  position: relative;
+  color: var(--color-bright);
+}
+
+.download-section a:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip {
+  width: 190px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 115%;
+  left: -77px;
+  background-color: var(--color-chant-bg);
+  text-align: center;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms;
+}
+
+.tooltip::before {
+  content: '';
+  margin-left: -7px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent var(--color-chant-bg) transparent;
+}
+
+.download-icon {
+  height: 45px;
+  cursor: pointer;
+  animation: popUp 200ms ease-out 1000ms forwards;
+  opacity: 0;
+}
+
+.download-icon:hover .transparent-bg {
+  opacity: 1;
+}
+
+.transparent-bg {
+  opacity: 0;
+  transition: all 300ms;
+}
+
+
+.logo-st0 {
+  fill: var(--color-chant-bg);
+}
+
+.logo-st1 {
+  fill: #41187E;
+}
+
+.logo-st2 {
+  fill: var(--color-bright); /* #ECECEC */
+}
+
+.icon-outline {
+  fill: var(--color-bright); /* #cbcbcb */
+}
+
+.download-st0 {
+  fill: var(--color-bright);
+}
+
+.chrome-st0 {
+  fill: #DE362A;
+}
+
+.chrome-st1 {
+  fill: #289A48;
+}
+
+.chrome-st2 {
+  fill: #FBBF12;
+}
+
+.chrome-st3 {
+  fill: #1A73E8;
+}
+
+.firefox-st0 {
+  fill: #FA8918;
+}
+
+.edge-st1 {
+  fill:#0D559D;
+}
+
+.edge-st2 {
+  fill:#0882D8;
+}
+
+.edge-st3 {
+  fill:#2FC2E0;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: rotate(-14deg) translate(-9px, -95px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-12deg) translate(-9px, 50px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-95px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(95px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(95px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes barAnimation {
+  0% {
+    transform: scaleX(1);
+  }
+  90% {
+    transform: scaleX(0);
+  }
+  91% {
+    transform: scaleX(1.13);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
