@@ -54,7 +54,7 @@ p {
   padding: 10px 300px 0;
   background-color: var(--color-dark);
   position: sticky;
-  bottom: 110px;
+  bottom: 137px;
   color: var(--color-bright);
   display: flex;
   flex-direction: row;
@@ -75,7 +75,7 @@ p {
 .download-section {
   width: 250px;
   height: 60px;
-  padding: 15px 300px 42px;
+  padding: 15px 300px 67px;
   background-color: var(--color-dark);
   position: sticky;
   bottom: 0;
@@ -107,6 +107,7 @@ p {
   opacity: 0;
   visibility: hidden;
   transition: all 200ms;
+  z-index: 10;
 }
 
 .tooltip::before {
@@ -118,6 +119,15 @@ p {
   border-width: 7px;
   border-style: solid;
   border-color: transparent transparent var(--color-chant-bg) transparent;
+}
+
+.bug-or-feedback {
+  position: sticky;
+  bottom: 10px;
+  color: var(--color-bright);
+  font-weight: 500;
+  animation: fadeIn var(--animation-length) ease-out 1500ms forwards;
+  opacity: 0;
 }
 
 .download-icon {
